@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/contrato_detalle"
+    tools:context=".ui.contratos.ContratoDetalleFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContratodetalle"
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+        android:background="#B9353434"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644">
+
+
+        <TextView
+            android:id="@+id/tvCodigoLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Código"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFechaInicioLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginTop="16dp"
+            android:text="Fecha de Inicio"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCodigoCD" />
+
+        <TextView
+            android:id="@+id/tvFechaFinLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginTop="16dp"
+            android:text="Fecha Fin"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioCD" />
+
+        <TextView
+            android:id="@+id/tvMontoLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginTop="16dp"
+            android:text="Monto"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaFinCD" />
+
+        <TextView
+            android:id="@+id/tvInquilinoLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginTop="16dp"
+            android:text="Inquilino"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMontoCD" />
+
+        <TextView
+            android:id="@+id/tvInmuebleLabelCD"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginTop="16dp"
+            android:text="Inmueble"
+            android:textColor="#E1BEE7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInquilinoCD" />
+
+        <TextView
+            android:id="@+id/tvCodigoCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Código"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCodigoLabelCD" />
+
+        <TextView
+            android:id="@+id/tvFechaInicioCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Fecha de Inicio"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioLabelCD" />
+
+        <TextView
+            android:id="@+id/tvFechaFinCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Fecha Fin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaFinLabelCD" />
+
+        <TextView
+            android:id="@+id/tvMontoCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Monto"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMontoLabelCD" />
+
+        <TextView
+            android:id="@+id/tvInquilinoCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Inquilino"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInquilinoLabelCD" />
+
+        <TextView
+            android:id="@+id/tvInmuebleCD"
+            android:layout_width="220dp"
+            android:layout_height="35sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:shadowColor="@color/material_dynamic_neutral_variant90"
+            android:text="Inmueble"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInmuebleLabelCD" />
+
+        <Button
+            android:id="@+id/btnPagos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Ver Pagos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInmuebleCD"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Información del Contrato"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/clContratodetalle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.873" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

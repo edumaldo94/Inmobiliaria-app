@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mapaFragment">
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="com.softulp.inmobiliaria.ui.home.MapaFragment"
+        android:label="Ubicación"
+        tools:layout="@layout/fragment_mapa" />
+    <fragment
+        android:id="@+id/nav_inmuebleFragment"
+        android:name="com.softulp.inmobiliaria.ui.inmuebles.InmuebleFragment"
+        android:label="Inmuebles"
+        tools:layout="@layout/fragment_inmueble">
+        <action
+            android:id="@+id/action_nav_inmuebleFragment_to_inmuebleDetalleFragment"
+            android:label="Detalles"
+            app:destination="@id/inmuebleDetalleFragment" />
+        <action
+            android:id="@+id/action_nav_inmuebleFragment_to_inmuebleAgregarFragment"
+            android:label="Agregar"
+            app:destination="@id/inmuebleAgregarFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inquilinoFragment"
+        android:name="com.softulp.inmobiliaria.ui.inquilinos.InquilinoFragment"
+        android:label="Inmuebles Alquilados"
+        tools:layout="@layout/fragment_inquilino">
+        <action
+            android:id="@+id/action_inquilinoDetalleFragment_to_nav_inquilinoFragment"
+            app:destination="@id/inquilinoDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contratoFragment"
+        android:name="com.softulp.inmobiliaria.ui.contratos.ContratoFragment"
+        android:label="Contratos Activos"
+        tools:layout="@layout/fragment_contrato" >
+        <action
+            android:id="@+id/action_nav_contratoFragment_to_contratoDetalleFragment"
+            app:destination="@id/contratoDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_perfilFragment"
+        android:name="com.softulp.inmobiliaria.ui.Perfil.PerfilFragment"
+        android:label="Perfil Propietario"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_nav_perfilFragment_to_claveFragment"
+            android:label="Cambiar Clave"
+            app:destination="@id/claveFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_salirFragment"
+        android:name="com.softulp.inmobiliaria.ui.salir.SalirFragment"
+        android:label="Salir"
+        tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/claveFragment"
+        android:name="com.softulp.inmobiliaria.ui.Perfil.ClaveFragment"
+        android:label="Clave Nueva" >
+        <action
+            android:id="@+id/action_claveFragment_to_nav_perfilFragment"
+            app:destination="@id/nav_perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inmuebleDetalleFragment"
+        android:name="com.softulp.inmobiliaria.ui.inmuebles.InmuebleDetalleFragment"
+        android:label="Detalles de Inmueble"
+        tools:layout="@layout/fragment_inmueble_detalle" >
+        <action
+            android:id="@+id/action_inmuebleDetalleFragment_to_nav_inmuebleFragment"
+            app:destination="@id/nav_inmuebleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inmuebleAgregarFragment"
+        android:name="com.softulp.inmobiliaria.ui.inmuebles.InmuebleAgregarFragment"
+        android:label="Nuevo Inmueble"
+        tools:layout="@layout/fragment_inmueble_agregar" >
+        <action
+            android:id="@+id/action_inmuebleAgregarFragment_to_nav_inmuebleFragment"
+            app:destination="@id/nav_inmuebleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inquilinoDetalleFragment"
+        android:name="com.softulp.inmobiliaria.ui.inquilinos.InquilinoDetalleFragment"
+        android:label="Detalle del Inquilino"
+        tools:layout="@layout/fragment_inquilino_detalle" >
+        <action
+            android:id="@+id/action_inquilinoDetalleFragment_to_nav_inquilinoFragment"
+            app:destination="@id/nav_inquilinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contratoDetalleFragment"
+        android:name="com.softulp.inmobiliaria.ui.contratos.ContratoDetalleFragment"
+        android:label="Detalle del Contrato"
+        tools:layout="@layout/fragment_contrato_detalle" >
+        <action
+            android:id="@+id/action_contratoDetalleFragment_to_nav_contratoFragment"
+            app:destination="@id/nav_contratoFragment" />
+        <action
+            android:id="@+id/action_contratoDetalleFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.softulp.inmobiliaria.ui.pagos.PagoFragment"
+        android:label="Detalle de Pagos"
+        tools:layout="@layout/fragment_pago" >
+        <action
+            android:id="@+id/action_pagoFragment_to_contratoDetalleFragment"
+            app:destination="@id/contratoDetalleFragment" />
+    </fragment>
+
+
+</navigation>

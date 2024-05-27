@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- CardView for Item 1 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardItem1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#2C595959"
+
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/fondo_itemdos"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgFotoInmueble"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="16dp"
+                android:scaleType="centerCrop"
+
+                tools:src="@tools:sample/avatars" />
+
+
+            <Button
+                android:id="@+id/btnVerInquilinoDI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgFotoInmueble"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="11dp"
+                android:layout_toEndOf="@+id/imgFotoInmueble"
+                android:text="Ver"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCalleInmuebleAlqu" />
+
+            <TextView
+                android:id="@+id/tvCalleInmuebleAlqu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imgFotoInmueble"
+                android:layout_alignBottom="@+id/imgFotoInmueble"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="71dp"
+                android:layout_toEndOf="@+id/imgFotoInmueble"
+                android:text="TextView"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

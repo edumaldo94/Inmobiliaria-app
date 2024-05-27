@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_crearnmueble"
+
+    tools:context=".ui.inmuebles.InmuebleAgregarFragment">
+
+
+    <EditText
+        android:id="@+id/etAmbientesCrear"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Cantidad de Ambientes"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrecioCrear" />
+
+    <EditText
+        android:id="@+id/etDireccionCrear"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Direccion"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPrecioCrear"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDireccionCrear" />
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:hint="Tipo"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAmbientesCrear" />
+
+    <Spinner
+        android:id="@+id/spinnerUso"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:hint="Uso"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTipo" />
+
+
+    <ImageView
+        android:id="@+id/imgNuevoInmueble"
+        android:layout_width="352dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="108dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTipo"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnCrearInm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgNuevoInmueble"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/baseline_add_a_photo_24"
+        app:backgroundTint="@color/design_default_color_secondary_variant"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNuevoInmueble"
+        app:layout_constraintEnd_toEndOf="@+id/imgNuevoInmueble"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imgNuevoInmueble"
+        app:layout_constraintTop_toTopOf="@+id/imgNuevoInmueble"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
